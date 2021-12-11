@@ -6,27 +6,28 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌─〔 %me 〕
-├ Hai, %name!
-│
-├ Tersisa *%limit Limit*
-├ Role *%role*
-├ Level *%level (%exp / %maxexp)* [%xp4levelup]
-├ %totalexp XP secara Total
-│ 
-├ Tanggal: *%week %weton, %date*
-├ Tanggal Islam: *%dateIslamic*
-├ Waktu: *%time*
-│
-├ Uptime: *%uptime (%muptime)*
-├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
-└────
-%readmore`.trimStart(),
-  header: '┌─〔 %category 〕',
-  body: '├ %cmd %islimit %isPremium',
-  footer: '└────\n',
+╭━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╮
+┃╭┈─────────────⩵꙰ཱི࿐
+┃╰── %me ──➤ ↶↷*
+╰•͙✩̣̣̣̣   Hai, %name!
+⁙┃〲
+⁙┃〲 Tersisa *%limit Limit*
+⁙┃〲 Role *%role*
+⁙┃〲 Level *%level (%exp / %maxexp)* [%xp4levelup]
+⁙┃〲 %totalexp XP secara Total
+⁙┃〲 
+⁙┃〲 Tanggal: *%week %weton, %date*
+⁙┃〲 Tanggal Islam: *%dateIslamic*
+⁙┃〲 Waktu: *%time*
+⁙┃〲
+⁙┃〲 Uptime: *%uptime (%muptime)*
+⁙┃〲 Database: %rtotalreg dari %totalreg
+⁙┃〲 Grup wa: https://chat.whatsapp.com/FHX57KmDNvnC7QKdEfUCX2
+⁙╰•°°°🕊°°°°°🕊°°°°°°🕊°°°°°°°°
+readmore`.trimStart(),
+  header: '╭━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╮\n┃╭┈─────────────⩵꙰ཱི࿐\n┃╰── %category ──➤ ↶↷\n╰•͙✩̣̣̣̣ ',
+  body: '☠ %cmd %islimit %isPremium',
+  footer: '⁙╰•°°°🕊°°°°°🕊°°°°°°🕊°°°°°°°°\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -190,7 +191,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         "listMessage": {
           "title": `${ucapan()}, ${name}`.trim(),
           "description": "© 𝕯𝖆𝖗𝖐 𝕬𝖓𝖌𝖊𝖑",
-          "buttonText": "Klik Disini",
+          "buttonText": "Klik Tod",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
