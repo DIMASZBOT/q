@@ -1,15 +1,8 @@
-let fetch = require('node-fetch')
-let arr = []
-fetch('https://raw.githubusercontent.com/Caliph71/txt/main/darkjokes.txt')
-    .then(res => res.text())
-    .then(txt => arr = txt.split('\n'))
 let handler = async (m, { conn }) => {
-    let img = arr[Math.floor(Math.random() * arr.length)]
-    if (!img) throw img
-    await conn.sendFile(m.chat, img, '', '© stikerin', m, 0, { thumbnail: await (await fetch(img)).buffer() })
+    conn.sendFile(m.chat, global.API('xteam', '/asupan/darkjoke', {}, 'APIKEY'), '', 'drag joles', m)
 }
-handler.help = ['darkjoke']
+handler.help = ['darkjokes']
 handler.tags = ['internet']
-handler.command = /^((drag|dark)joke)$/i
+handler.command = /^(dragjokes|darkjokes)$/i
 
 module.exports = handler
